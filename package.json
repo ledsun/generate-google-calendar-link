@@ -1,0 +1,31 @@
+{
+  "name": "generate-google-calendar-link",
+  "description": "Genelate a link to add a new event to the Google Calendar.",
+  "version": "0.0.1",
+  "author": "ledsun",
+  "bugs": {
+    "url": "https://github.com/ledsun/generate-google-calendar-link/issues"
+  },
+  "devDependencies": {
+    "espower-loader": "^0.10.0",
+    "mocha": "^2.0.1",
+    "power-assert": "^0.10.0"
+  },
+  "homepage": "https://github.com/ledsun/generate-google-calendar-link",
+  "keywords": [
+    "google",
+    "calendar"
+  ],
+  "license": {
+    "type": "MIT",
+    "url": "http://ledsun.mit-license.org/"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ledsun/generate-google-calendar-link.git"
+  },
+  "scripts": {
+    "test": "mocha --require enable-power-assert.js"
+  }
+}
