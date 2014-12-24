@@ -1,4 +1,4 @@
-# generate-goggle-calendar-link
+# generate-google-calendar-link
 
 Genelate a link to add a new event to the Google Calendar.
 
