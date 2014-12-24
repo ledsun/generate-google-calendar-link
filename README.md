@@ -10,8 +10,6 @@ DOM 要素を返します。
 
 [![Build Status](https://travis-ci.org/ledsun/generate-google-calendar-link.svg)](https://travis-ci.org/ledsun/generate-google-calendar-link)
 
-[![Sauce Test Status](https://saucelabs.com/browser-matrix/generate-google-calendar-link.svg)](https://saucelabs.com/u/generate-google-calendar-link)
-
 ## Usage
 
 実行例
@@ -38,7 +36,8 @@ npm install generate-google-calendar-link
 
 実行例
 ```js
-var document = require("global/document")
+var document = require('global/document')
+var generateLink = require('generate-google-calendar-link')
 var a = generateLink({
     start: new Date(2014, 10, 15, 10),
     end: new Date(2014, 10, 15, 18),
@@ -51,51 +50,18 @@ document.getElementById('result').appendChild(a)
 ```
 
 ### For browsers
-ダウンロード
+
+Use browserify.
+
+For example:
 ```
-curl https://raw.githubusercontent.com/ledsun/generate-google-calendar-link/master/index.js -o generate-google-calendar-link.js
+browserify example.js -o bundle.js
 ```
 
 htmlにscriptタグを埋め込みます。
 ```html
 <span id="result"></span>
-<script src="generate-google-calendar-link.js"></script>
-<script>
-var a = generateLink({
-    start: new Date(2014, 10, 15, 10),
-    end: new Date(2014, 10, 15, 18),
-    title: 'New event',
-    location: 'Some where',
-    details: 'http://event.description.example.com/11234'
-})
-
-document.getElementById('result').appendChild(a)
-</script>
-```
-
-### For bower
-インストール
-
-```
-bower install generate-google-calendar-link
-```
-
-htmlにscriptタグを埋め込みます。
-```html
-<link rel="stylesheet" href="bower_components/generate-google-calendar-link/index.css">
-<div id="result"></div>
-<script src="bower_components/generate-google-calendar-link/index.js"></script>
-<script>
-var a = generateLink({
-    start: new Date(2014, 10, 15, 10),
-    end: new Date(2014, 10, 15, 18),
-    title: 'New event',
-    location: 'Some where',
-    details: 'http://event.description.example.com/11234'
-})
-
-document.getElementById('result').appendChild(a)
-</script>
+<script src="bundle.js"></script>
 ```
 
 ## Contributing
@@ -109,23 +75,7 @@ contributeするには
 1. Open a Pull Request
 1. Enjoy a refreshing coffe and wait
 
-### Build
-
-```
-npm install
-npm run build
-```
-
-The main function in `src/generate-google-calendar-link.js`.
-
-主な関数は`src/generate-google-calendar-link.js`に入っています。
-
-`src/generate-google-calendar-link.js` is converted to `index.js` as [UMD](https://github.com/umdjs/umd) by [gulp](http://gulpjs.com/).
-
-`src/generate-google-calendar-link.js`を[gulp](http://gulpjs.com/)使って[UMD](https://github.com/umdjs/umd)に変換します。変換した先は`index.js`です。
-
-### Testing
-#### Node.js
+### Test
 
 [mocha](https://github.com/mochajs/mocha) is used to test.
 
@@ -133,27 +83,7 @@ The main function in `src/generate-google-calendar-link.js`.
 
 ```
 npm install
-npm run build
 npm test
-```
-
-#### browser
-
-Open `example.html` to check `index.js` is loadable by a browser.
-
-ブラウザで読み込めるか確認するには、`example.html`を開きます。
-
-```
-open example.js
-```
-
-
-[zuul](https://github.com/defunctzombie/zuul) is used to check `index.js` works in corss borwsers.
-
-クロスブラウザで動作するか確認するには、[zuul](https://github.com/defunctzombie/zuul)を使います。
-
-```
-npm run browser
 ```
 
 ### Deploy
@@ -164,7 +94,6 @@ Update `package.json`.
 
 ```
 npm install
-npm run build
 npm test
 npm publish
 ```
