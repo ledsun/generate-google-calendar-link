@@ -6,10 +6,15 @@
   "bugs": {
     "url": "https://github.com/ledsun/generate-google-calendar-link/issues"
   },
+  "dependencies": {
+    "generate-google-calendar-url": "0.0.1",
+    "hyperscript": "^1.4.2"
+  },
   "devDependencies": {
     "espower-loader": "^0.10.0",
     "mocha": "^2.0.1",
-    "power-assert": "^0.10.0"
+    "power-assert": "^0.10.0",
+    "zuul": "^1.16.3"
   },
   "homepage": "https://github.com/ledsun/generate-google-calendar-link",
   "keywords": [
@@ -26,10 +31,7 @@
     "url": "https://github.com/ledsun/generate-google-calendar-link.git"
   },
   "scripts": {
+    "browser": "zuul --local 8080 -- test",
     "test": "mocha --require enable-power-assert.js"
-  },
-  "dependencies": {
-    "generate-google-calendar-url": "0.0.1",
-    "hyperscript": "^1.4.2"
   }
 }

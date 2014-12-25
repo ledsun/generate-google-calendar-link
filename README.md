@@ -122,7 +122,6 @@ npm test
 npm run browser
 ```
 
-
 ### Deploy
 #### npm
 Update `package.json`.
