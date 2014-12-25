@@ -10,6 +10,8 @@ DOM 要素を返します。
 
 [![Build Status](https://travis-ci.org/ledsun/generate-google-calendar-link.svg)](https://travis-ci.org/ledsun/generate-google-calendar-link)
 
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/generate-google-calendar-link.svg)](https://saucelabs.com/u/generate-google-calendar-link-bower)
+
 ## Usage
 
 実行例
@@ -64,6 +66,29 @@ htmlにscriptタグを埋め込みます。
 <script src="bundle.js"></script>
 ```
 
+### For bower
+```
+bower install generate-google-calendar-link
+```
+
+htmlにscriptタグを埋め込みます。
+```html
+<link rel="stylesheet" href="bower_components/generate-google-calendar-link/index.css">
+<div id="result"></div>
+<script src="bower_components/generate-google-calendar-link/index.js"></script>
+<script>
+var a = generateLink({
+    start: new Date(2014, 10, 15, 10),
+    end: new Date(2014, 10, 15, 18),
+    title: 'New event',
+    location: 'Some where',
+    details: 'http://event.description.example.com/11234'
+})
+
+document.getElementById('result').appendChild(a)
+</script>
+```
+
 ## Contributing
 
 contributeするには
@@ -76,6 +101,7 @@ contributeするには
 1. Enjoy a refreshing coffe and wait
 
 ### Test
+#### Standalone
 
 [mocha](https://github.com/mochajs/mocha) is used to test.
 
@@ -86,8 +112,19 @@ npm install
 npm test
 ```
 
-### Deploy
+#### cross borwser
 
+[zuul](https://github.com/defunctzombie/zuul) is used to check `index.js` works in corss borwsers.
+
+クロスブラウザで動作するか確認するには、[zuul](https://github.com/defunctzombie/zuul)を使います。
+
+```
+npm run browser
+```
+
+
+### Deploy
+#### npm
 Update `package.json`.
 
 `package.json`を更新します。
@@ -97,3 +134,6 @@ npm install
 npm test
 npm publish
 ```
+
+#### bower
+See [generate-google-calendar-link-bower](https://github.com/ledsun/generate-google-calendar-link-bower).
