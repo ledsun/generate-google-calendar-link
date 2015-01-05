@@ -4,3 +4,8 @@ node_js:
 script:
 - npm run build
 - npm test
+- npm run saucelabs
+env:
+  global:
+  - secure: X/nb/ZQwSAfK92XPeP7SY+Cr56a67Vlv1w7qdqVE/8iCSxjZTTZo8fwAFPJ2/lRiHL2Q0Q481Bl0HOadiAxsZt2nRS+taozgdAMsvBk9linJOlN0hnnCz1dQf0kRvh3yRwdT4m2Im3ooFxPADr5yJKiH/RvxPJ5RDJbUkjxiLSQ=
+  - secure: L6ziSTh3PqbyKpiVByU+2WUbKKEaeUzmd7w99IUkQs8xIlZmr/hjmNKhkdbAEIApNuJdC5yfCUhcOSZ8//0xKkwsLHR4TeMvYoH8wi8ry0iwNtCMRsU2eVpj/+9p9pb98tFoQ27wNJTH950Oh74knuzCWziJFlaglctQj7Uuljo=

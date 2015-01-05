@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "espower-loader": "^0.10.0",
+    "karma": "^0.12.31",
     "mocha": "^2.0.1",
     "power-assert": "^0.10.0",
     "zuul": "^1.16.3"
@@ -32,6 +33,7 @@
   },
   "scripts": {
     "browser": "zuul --local 8080 -- test",
+    "saucelabs": "zuul -- test",
     "test": "mocha --require enable-power-assert.js"
   }
 }
