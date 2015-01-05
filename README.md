@@ -10,7 +10,7 @@ DOM 要素を返します。
 
 [![Build Status](https://travis-ci.org/ledsun/generate-google-calendar-link.svg)](https://travis-ci.org/ledsun/generate-google-calendar-link)
 
-[![Sauce Test Status](https://saucelabs.com/browser-matrix/generate-google-calendar-link.svg)](https://saucelabs.com/u/generate-google-calendar-link-bower)
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/google-calendar-link.svg)](https://saucelabs.com/u/google-calendar-link)
 
 ## Usage
 
