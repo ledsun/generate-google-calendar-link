@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "generate-google-calendar-url": "^0.0.2",
-    "hyperscript": "^1.4.2"
+    "hyperscript": "^2.0.2"
   },
   "devDependencies": {
     "espower-loader": "^0.10.0",
