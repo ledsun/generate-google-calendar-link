@@ -8,10 +8,6 @@ This function will return a dom element.
 
 DOM 要素を返します。
 
-[![Build Status](https://travis-ci.org/ledsun/generate-google-calendar-link.svg)](https://travis-ci.org/ledsun/generate-google-calendar-link)
-
-[![Sauce Test Status](https://saucelabs.com/browser-matrix/google-calendar-link.svg)](https://saucelabs.com/u/google-calendar-link)
-
 ## Usage
 
 実行例
