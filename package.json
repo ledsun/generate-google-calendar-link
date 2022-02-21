@@ -11,9 +11,7 @@
     "hyperscript": "^2.0.2"
   },
   "devDependencies": {
-    "espower-loader": "^1.2.2",
-    "mocha": "^9.2.1",
-    "power-assert": "^1.6.1"
+    "mocha": "^9.2.1"
   },
   "homepage": "https://github.com/ledsun/generate-google-calendar-link",
   "keywords": [
@@ -30,6 +28,6 @@
     "url": "https://github.com/ledsun/generate-google-calendar-link.git"
   },
   "scripts": {
-    "test": "mocha --require enable-power-assert.js"
+    "test": "mocha"
   }
 }

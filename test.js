@@ -1,5 +1,5 @@
-var assert = require('power-assert'),
-  generateLink = require('./index')
+var assert = require('assert')
+var generateLink = require('./index')
 
 describe('generate google calendar link', function() {
   it('return anchor dom', function() {
