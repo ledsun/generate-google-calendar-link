@@ -1,7 +1,7 @@
 {
   "name": "generate-google-calendar-link",
   "description": "Genelate a link to add a new event to the Google Calendar.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "ledsun",
   "bugs": {
     "url": "https://github.com/ledsun/generate-google-calendar-link/issues"
