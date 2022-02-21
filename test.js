@@ -1,9 +1,9 @@
-var assert = require('assert')
-var generateLink = require('./index')
+const assert = require('assert')
+const generateLink = require('./index')
 
-describe('generate google calendar link', function() {
-  it('return anchor dom', function() {
-    var link = generateLink({})
+describe('generate google calendar link', () => {
+  it('return anchor dom', () => {
+    const link = generateLink({})
 
     assert.equal(link.className, 'google-calendar-link')
     assert.equal(link.nodeName.toLowerCase(), 'a')
