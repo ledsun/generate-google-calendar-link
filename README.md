@@ -112,16 +112,6 @@ npm install
 npm test
 ```
 
-#### cross borwser
-
-[zuul](https://github.com/defunctzombie/zuul) is used to check `index.js` works in corss borwsers.
-
-クロスブラウザで動作するか確認するには、[zuul](https://github.com/defunctzombie/zuul)を使います。
-
-```
-npm run browser
-```
-
 ### Deploy
 #### npm
 Update `package.json`.
