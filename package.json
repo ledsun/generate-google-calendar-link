@@ -7,7 +7,7 @@
     "url": "https://github.com/ledsun/generate-google-calendar-link/issues"
   },
   "dependencies": {
-    "generate-google-calendar-url": "^0.0.2",
+    "generate-google-calendar-url": "^0.0.3",
     "hyperscript": "^2.0.2"
   },
   "devDependencies": {
