@@ -1,0 +1,5 @@
+node_modules/
+.github/
+.agents/
+.codex/
+test.js
