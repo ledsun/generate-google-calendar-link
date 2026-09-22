@@ -87,12 +87,16 @@ npm test
 
 ### Deploy
 #### npm
-Update `package.json`.
+Publishing uses [npm trusted publishing](https://docs.npmjs.com/trusted-publishers/).
+In the npm package settings, configure GitHub Actions as a trusted publisher:
 
-`package.json`を更新します。
+- Organization or user: `ledsun`
+- Repository: `generate-google-calendar-link`
+- Workflow filename: `publish.yml`
+- Environment name: leave blank
+- Allow direct publishing with `npm publish`.
 
-```
-npm install
-npm test
-npm publish
-```
+Update the version in `package.json` and `package-lock.json` (for example, with
+`npm version patch`), then push the commit and version tag. Publish a GitHub
+release for that tag to run `.github/workflows/publish.yml`. The workflow installs
+dependencies, runs tests, and publishes to npm. Prereleases are skipped.
