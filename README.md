@@ -27,15 +27,17 @@ See [generate-google-calendar-url](https://github.com/ledsun/generate-google-cal
 ## Setup
 
 ### For Node.js
+Node.js 26 以上が必要です。このパッケージは ES Modules の default export を公開します。
+従来の `require()` は `import` に変更してください。
+
 インストール
 ```
 npm install generate-google-calendar-link
 ```
 
-実行例
+実行例（`.mjs` ファイル、または `package.json` に `"type": "module"` を指定）
 ```js
-var document = require('global/document')
-var generateLink = require('generate-google-calendar-link')
+import generateLink from 'generate-google-calendar-link'
 var a = generateLink({
     start: new Date(2014, 10, 15, 10),
     end: new Date(2014, 10, 15, 18),
@@ -44,22 +46,29 @@ var a = generateLink({
     details: 'http://event.description.example.com/11234'
 })
 
-document.getElementById('result').appendChild(a)
+console.log(a.href)
 ```
 
 ### For browsers
 
-Use browserify.
+ES Modules と CommonJS の依存ライブラリを処理できるバンドラーを使用してください。
+従来の Browserify のみの手順は対応しません。
+日付の処理にはブラウザの Temporal API が必要です。ポリフィルは同梱しません。
 
-For example:
-```
-browserify example.js -o bundle.js
+バンドラーのエントリーファイル（`example.js`）の例：
+```js
+import generateLink from 'generate-google-calendar-link'
+
+document.getElementById('result').appendChild(generateLink({
+    title: 'New event',
+    date: '2026/09/22'
+}))
 ```
 
-htmlにscriptタグを埋め込みます。
+バンドラーが出力した `bundle.js` を HTML から読み込みます。
 ```html
 <span id="result"></span>
-<script src="bundle.js"></script>
+<script type="module" src="bundle.js"></script>
 ```
 
 ## Contributing

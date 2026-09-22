@@ -1,7 +1,7 @@
-const h = require('hyperscript')
-const generateUrl = require('generate-google-calendar-url')
+import h from 'hyperscript'
+import generateUrl from 'generate-google-calendar-url'
 
-module.exports = (opt) => {
+export default (opt) => {
     return h('a.google-calendar-link', {
         href: generateUrl(opt),
         target: '_blank'
