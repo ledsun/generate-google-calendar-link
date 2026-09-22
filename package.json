@@ -11,7 +11,7 @@
     "hyperscript": "^2.0.2"
   },
   "devDependencies": {
-    "mocha": "^10.2.0"
+    "mocha": "^12.0.2"
   },
   "homepage": "https://github.com/ledsun/generate-google-calendar-link",
   "keywords": [
