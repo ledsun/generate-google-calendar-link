@@ -62,29 +62,6 @@ htmlにscriptタグを埋め込みます。
 <script src="bundle.js"></script>
 ```
 
-### For bower
-```
-bower install generate-google-calendar-link
-```
-
-htmlにscriptタグを埋め込みます。
-```html
-<link rel="stylesheet" href="bower_components/generate-google-calendar-link/index.css">
-<div id="result"></div>
-<script src="bower_components/generate-google-calendar-link/index.js"></script>
-<script>
-var a = generateLink({
-    start: new Date(2014, 10, 15, 10),
-    end: new Date(2014, 10, 15, 18),
-    title: 'New event',
-    location: 'Some where',
-    details: 'http://event.description.example.com/11234'
-})
-
-document.getElementById('result').appendChild(a)
-</script>
-```
-
 ## Contributing
 
 contributeするには
@@ -119,6 +96,3 @@ npm install
 npm test
 npm publish
 ```
-
-#### bower
-See [generate-google-calendar-link-bower](https://github.com/ledsun/generate-google-calendar-link-bower).
