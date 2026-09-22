@@ -97,6 +97,6 @@ In the npm package settings, configure GitHub Actions as a trusted publisher:
 - Allow direct publishing with `npm publish`.
 
 Update the version in `package.json` and `package-lock.json` (for example, with
-`npm version patch`), then push the commit and version tag. Publish a GitHub
-release for that tag to run `.github/workflows/publish.yml`. The workflow installs
-dependencies, runs tests, and publishes to npm. Prereleases are skipped.
+`npm version patch`), then push the commit and version tag. Pushing a tag matching
+`v*` (for example, `v0.0.6`) runs `.github/workflows/publish.yml`. The workflow
+installs dependencies, runs tests, and publishes to npm.
